@@ -13,8 +13,8 @@ const data = [
   },
   {
     id: 3,
-    text: "projects",
-    url: "/projects/",
+    text: "work",
+    url: "/work/",
   },
   {
     id: 4,
@@ -35,7 +35,6 @@ const tempLinks = data.map(link => {
     </li>
   )
 })
-// I KNOW WE CAN COMBINE IT !!!!!
 
 export default ({ styleClass }) => {
   return (
