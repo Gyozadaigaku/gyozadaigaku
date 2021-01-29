@@ -38,6 +38,20 @@ module.exports = {
         singleTypes: [],
       },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "noopener noreferrer",
+            },
+          },
+        ],
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-webfonts`,
     //   options: {

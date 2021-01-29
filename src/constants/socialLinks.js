@@ -1,8 +1,8 @@
 import React from "react"
 import {
-  FaFacebookSquare,
-  FaLinkedin,
-  FaDribbbleSquare,
+  FaInstagram,
+  FaGithub,
+  FaQuora,
   FaBehanceSquare,
   FaTwitterSquare,
 } from "react-icons/fa"
@@ -10,34 +10,24 @@ import {
 const data = [
   {
     id: 1,
-    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
-    url: "https://www.twitter.com",
+    icon: <FaInstagram className="social-icon"></FaInstagram>,
+    url: "https://www.instagram.com/gyozadaigaku",
   },
   {
     id: 2,
-    icon: <FaLinkedin className="social-icon"></FaLinkedin>,
-    url: "https://www.twitter.com",
+    icon: <FaGithub className="social-icon"></FaGithub>,
+    url: "https://github.com/Gyozadaigaku",
   },
   {
     id: 3,
-    icon: <FaDribbbleSquare className="social-icon"></FaDribbbleSquare>,
-    url: "https://www.twitter.com",
-  },
-  {
-    id: 4,
-    icon: <FaBehanceSquare className="social-icon"></FaBehanceSquare>,
-    url: "https://www.twitter.com",
-  },
-  {
-    id: 5,
-    icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
-    url: "https://www.twitter.com",
+    icon: <FaQuora className="social-icon"></FaQuora>,
+    url: "https://jp.quora.com/profile/Jun-Inoue-1",
   },
 ]
 const links = data.map(link => {
   return (
     <li key={link.id}>
-      <a href={link.url} className="social-link">
+      <a href={link.url} className="social-link" target="_blank">
         {link.icon}
       </a>
     </li>
