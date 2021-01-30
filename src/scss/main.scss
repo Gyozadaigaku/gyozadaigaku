@@ -117,7 +117,8 @@ p {
   font-size: 0.875rem;
   border: 2px solid transparent;
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
+    rgba(0, 0, 0, 0.12) 0px 1px 10px 0px, rgba(0, 0, 0, 0.2) 0px 2px 4px -1px;
   border-radius: $radius;
   width: 20rem;
   text-align: center;
@@ -158,8 +159,9 @@ p {
   margin-bottom: 4rem;
   text-align: center;
 }
+
 .bg-grey {
-  background: var(--clr-grey-10);
+  background: $base-color-2;
 }
 
 /* page links */
@@ -215,7 +217,7 @@ Navbar
   background: transparent;
   border-color: transparent;
   cursor: pointer;
-  transition: var(--transition);
+  transition: $transition;
 }
 
 .toggle-btn:hover {
@@ -337,5 +339,61 @@ Hero
 
   .hero h4 {
     line-height: 1;
+  }
+}
+
+/*
+=============== 
+Skills
+===============
+*/
+.skill {
+  background: $base-color-3;
+  cursor: pointer;
+  padding: 3rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: $radius;
+  text-align: center;
+  -webkit-transition: $transition;
+  transition: $transition;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 4px 5px 0px,
+    rgba(0, 0, 0, 0.12) 0px 1px 10px 0px, rgba(0, 0, 0, 0.2) 0px 2px 4px -1px;
+}
+
+.skill--icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill img {
+  -webkit-transition: $transition;
+  transition: $transition;
+  width: 8.8rem;
+}
+
+.skill p {
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+.skill:hover {
+  background: $base-color-2;
+}
+
+.skill:hover img {
+  transform: rotate(4deg);
+}
+@media screen and (min-width: 676px) {
+  .skills--center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .skills--center {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
