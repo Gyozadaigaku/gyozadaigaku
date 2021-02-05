@@ -17,6 +17,9 @@ $transition: all 0.3s linear;
 $spacing: 0.2rem;
 $radius: 0.25rem;
 $radius-stack: 1rem;
+$clr-grey-10: hsl(210, 36%, 96%);
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
 /*
 =============== 
@@ -450,7 +453,7 @@ Jobs
   font-size: 1.25rem;
   letter-spacing: $spacing;
   margin: 0 0.5rem;
-  transition: var(--transition);
+  transition: $transition;
   cursor: pointer;
   padding: 0.25rem 0;
   line-height: 1;
@@ -660,4 +663,123 @@ Works
     grid-row: 1 / 1;
     text-align: left;
   }
+}
+
+/*
+=============== 
+Blog
+===============
+*/
+.blog {
+  display: block;
+  margin-bottom: 2rem;
+  background: $clr-grey-10;
+  border-radius: $radius;
+  box-shadow: $light-shadow;
+  transition: $transition;
+}
+
+.blog:hover {
+  box-shadow: $dark-shadow;
+  transform: scale(1.02);
+}
+
+.blog article {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.blog--card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 1.5rem 1rem;
+}
+
+.blog--card h4 {
+  color: $text-color-1;
+}
+
+.blog--img {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  height: 15rem;
+}
+
+.blog--footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog--footer p {
+  margin-bottom: 0;
+  font-weight: bold;
+  color: $text-color-1;
+}
+
+.blog--footer p:first-of-type {
+  display: inline-block;
+  background: $accent-color-2;
+  color: $text-color-3;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: $radius-stack;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+
+@media screen and (min-width: 576px) {
+  .blogs-center {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+    column-gap: 2rem;
+  }
+  .blog--img {
+    height: 17.5rem;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .blog--img {
+    height: 13.75rem;
+  }
+}
+
+/*
+===============
+Pages
+===============
+*/
+.blog-template,
+.projects-page,
+.blog-page,
+.error-page,
+.about-page,
+.contact-page {
+  background: $clr-grey-10;
+  min-height: calc(100vh - 5rem - 9rem);
+}
+
+.error-page {
+  display: grid;
+  place-items: center;
+  background: blue;
+  text-align: center;
+}
+
+.error-page h1 {
+  text-transform: uppercase;
+  color: green;
+  margin-bottom: 2rem;
+}
+
+/*
+===============
+Blog Page
+===============
+*/
+.blog-page .blog {
+  background: white;
 }
