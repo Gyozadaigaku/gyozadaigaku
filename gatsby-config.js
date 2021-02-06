@@ -11,7 +11,7 @@ module.exports = {
     author: "@gyozadaigaku",
     twitterUsername: "@anonymous",
     image: "/twitter-img.png",
-    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+    siteUrl: "https://gyozadaigaku.netlify.app",
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -50,19 +50,20 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-webfonts`,
-    //   options: {
-    //     fonts: {
-    //       google: [
-    //         {
-    //           family: "Roboto",
-    //           variants: ["400", "700"],
-    //         },
-    //         { family: "Open Sans" },
-    //       ],
-    //     },
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Roboto",
+              variants: ["400", "700"],
+            },
+            { family: "Open Sans" },
+            { family: "Almendra Display" },
+          ],
+        },
+      },
+    },
   ],
 }
