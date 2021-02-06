@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { FaShareSquare } from "react-icons/fa"
-const Work = ({ description, title, github, stack, url, image, index }) => {
+const Work = ({ description, title, stack, url, image, index }) => {
   return (
     <article className="work">
       {image && (
@@ -27,6 +27,12 @@ const Work = ({ description, title, github, stack, url, image, index }) => {
   )
 }
 
-Work.propTypes = {}
+Work.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
+  stack: PropTypes.arrayOf(PropTypes.object).isRequired,
+}
 
 export default Work
