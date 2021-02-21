@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
 import heroImg from "../assets/hero-img.svg"
+import mysteriousTriangle from "../assets/mysterious-triangle.svg"
 import heroCurve from "../assets/hero-curve.svg"
 // ...GatsbyImageSharpFluid
 const query = graphql`
@@ -37,6 +38,11 @@ const Hero = () => {
           width=""
           height=""
           alt="hero img"
+        />
+        <img
+          className="hero-sub--img"
+          src={mysteriousTriangle}
+          alt="mysterious triangle"
         />
       </div>
     </header>

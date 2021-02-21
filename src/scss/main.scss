@@ -421,9 +421,10 @@ Hero
 }
 
 .hero--center {
-  height: 100%;
-  display: grid;
   align-items: center;
+  display: grid;
+  height: 100%;
+  position: relative;
 }
 
 .hero--info {
@@ -431,6 +432,10 @@ Hero
 }
 
 .hero--img {
+  display: none;
+}
+
+.hero-sub--img {
   display: none;
 }
 
@@ -468,6 +473,23 @@ Hero
     display: block;
     grid-row: 1/1;
     grid-column: 16/-1;
+  }
+
+  .hero-sub--img {
+    animation: 15s linear infinite rotation;
+    display: block;
+    mix-blend-mode: soft-light;
+    position: absolute;
+    right: 6rem;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
