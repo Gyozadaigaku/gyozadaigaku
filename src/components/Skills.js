@@ -4,7 +4,7 @@ import skills from "../constants/skills"
 import headingCurve from "../assets/heading-curve.svg"
 const Skills = () => {
   return (
-    <section className="section bg-grey">
+    <section className="section bg-grey skills">
       <Title title="skills" />
       <div className="section--center skills--center">
         {skills.map(skill => {
