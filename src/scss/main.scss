@@ -8,7 +8,8 @@ $base-color-2: #f5f4f4;
 $base-color-3: white;
 $accent-color: #a18978;
 $accent-color-2: #d6d2c4;
-$text-color-1: #707070;
+$accent-color-3: #dada93;
+$text-color-1: #324d67;
 $text-color-2: white;
 $text-color-3: #6c6a62;
 $ff-primary: "Roboto", sans-serif;
@@ -20,6 +21,7 @@ $radius-stack: 1rem;
 $clr-grey-10: hsl(210, 36%, 96%);
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+$max-width: 1170px;
 
 /*
 =============== 
@@ -592,7 +594,7 @@ Jobs
 .jobs--center {
   width: 80vw;
   margin: 0 auto;
-  max-width: var(--max-width);
+  max-width: $max-width;
 }
 
 .btn-container {
@@ -602,7 +604,7 @@ Jobs
   background: white;
   border-radius: 5rem;
   justify-content: space-evenly;
-  border: 2px solid #e2edee;
+  // border: 2px solid #e2edee;
   position: relative;
 }
 
@@ -622,6 +624,7 @@ Jobs
 .job-btn {
   background: transparent;
   border-color: transparent;
+  color: $text-color-1;
   text-transform: capitalize;
   font-size: 1.25rem;
   letter-spacing: $spacing;
@@ -636,7 +639,7 @@ Jobs
   // background: $base-color-1;
 }
 .active-btn {
-  background: $base-color-1;
+  box-shadow: 0 2px $accent-color;
 }
 .job-info {
   /* min-height: 420px; */
@@ -646,10 +649,9 @@ Jobs
 }
 .job-info h4 {
   text-transform: uppercase;
-  color: var(--clr-grey-5);
-  background: var(--clr-grey-9);
+  color: $text-color-1;
   display: inline-block;
-  padding: 0.375rem 0.75rem;
+  padding: 0.375rem 0;
   border-radius: $radius;
 }
 
@@ -671,11 +673,7 @@ Jobs
 
 .job-desc p {
   margin-bottom: 0;
-  color: var(--clr-grey-3);
-}
-
-.job-icon {
-  color: var(--clr-primary-5);
+  color: $text-color-1;
 }
 
 .ripples-03 {
@@ -699,10 +697,10 @@ Jobs
     margin-bottom: 1rem;
   }
   .active-btn {
-    box-shadow: -2px 0 var(--clr-primary-5);
+    box-shadow: -2px 0 $accent-color;
   }
   .job-btn:hover {
-    box-shadow: -2px 0 var(--clr-primary-5);
+    box-shadow: -2px 0 $accent-color;
   }
 }
 
@@ -711,6 +709,9 @@ Jobs
 Works
 ===============
 */
+section.works {
+  padding: 5rem 0;
+}
 
 .works {
   background: $base-color-1;
@@ -726,6 +727,7 @@ Works
 .work--img {
   border-top-left-radius: $radius;
   border-top-right-radius: $radius;
+  box-shadow: $dark-shadow;
   height: 19rem;
   z-index: 1;
 }
@@ -737,7 +739,6 @@ Works
   left: 0;
   width: 100%;
   height: 100%;
-  // background: linear-gradient(to bottom right, var(--clr-primary-5), #222);
   background: linear-gradient(
     180deg,
     rgba(161, 137, 120, 1) 0%,
@@ -761,7 +762,7 @@ Works
 
 .work--number {
   display: inline-block;
-  font-size: 1.25rem;
+  font-size: 0.4rem;
   color: $base-color-2;
   margin-bottom: 0.75rem;
   transform: scale(6) translateY(0.2rem);
@@ -838,13 +839,29 @@ Works
 
   .work--img {
     grid-area: 1 / 1 / 1 / span 6;
-    height: 24rem;
+    // height: 24rem;
+    height: 80%;
+    width: 80%;
     border-radius: $radius;
+  }
+
+  .cloud-left {
+    position: absolute;
+    left: 6rem;
+  }
+
+  .cloud-right {
+    position: absolute;
+    right: 12rem;
   }
 
   .work--info {
     background: none;
     grid-area: 1 / 8 / 1 / 13;
+  }
+
+  .work--number {
+    font-size: 1.25rem;
   }
 
   .work:nth-of-type(even) .work--img {
@@ -863,6 +880,10 @@ Works
 Blog
 ===============
 */
+section.blogs {
+  padding: 5rem 0;
+}
+
 .blogs {
   background: $base-color-2;
   margin-top: -1rem;
@@ -967,13 +988,13 @@ Footer
 
 .footer h4 {
   margin-top: 0.5rem;
-  color: var(--clr-white);
+  color: $accent-color-2;
   font-weight: normal;
   text-transform: uppercase;
 }
 
 .footer h4 span {
-  color: var(--clr-primary-5);
+  color: $base-color-2;
 }
 
 .footer--links {
@@ -981,11 +1002,11 @@ Footer
 }
 
 .footer .social-link {
-  color: var(--clr-white);
+  color: $accent-color-2;
 }
 
 .footer .social-link:hover {
-  color: var(--clr-primary-5);
+  opacity: 0.8;
 }
 
 /*
@@ -1036,20 +1057,14 @@ Contact Page
   padding: 5rem 0;
 }
 .contact-form {
-  background: var(--clr-white);
-  border-radius: var(--radius);
   text-align: center;
-  box-shadow: var(--light-shadow);
-  transition: var(--transition);
   width: 90vw;
   max-width: 35rem;
 }
-.contact-form:hover {
-  box-shadow: var(--dark-shadow);
-}
+
 .contact-form h3 {
   padding-top: 1.25rem;
-  color: var(--clr-grey-5);
+  color: $text-color-1;
 }
 .form-group {
   padding: 1rem 1.5rem;
@@ -1060,23 +1075,22 @@ Contact Page
   padding: 0.75rem 1rem;
   border: none;
   margin-bottom: 1.25rem;
-  background: var(--clr-grey-10);
-  border-radius: var(--radius);
+  background: white;
+  border-radius: $radius;
   text-transform: uppercase;
-  letter-spacing: var(--spacing);
+  letter-spacing: $spacing;
 }
 .form-control::placeholder {
-  font-family: var(--ff-primary);
-  color: var(--clr-grey-1);
+  color: gray;
   text-transform: uppercase;
-  letter-spacing: var(--spacing);
+  letter-spacing: $spacing;
 }
 .submit-btn {
   display: block;
   width: 100%;
   padding: 1rem;
-  border-bottom-left-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -1099,19 +1113,19 @@ Blog Template
   display: inline-block;
 }
 .blog-template ul li {
-  background: var(--clr-grey-9);
-  color: var(--clr-grey-5);
+  background: $accent-color-2;
+  color: $text-color-1;
   padding: 0.5rem 1rem;
   margin: 1rem 0;
   text-transform: uppercase;
 }
 
 .blog-template blockquote {
-  background: var(--clr-primary-9);
-  border-radius: var(--radius);
+  background: $accent-color-3;
+  border-radius: $radius;
   padding: 1rem;
   line-height: 2;
-  color: var(--clr-primary-5);
+  color: $text-color-1;
   margin: 2rem 0;
 }
 .blog-template pre {
@@ -1119,7 +1133,7 @@ Blog Template
   color: yellow;
   overflow-x: scroll;
   padding: 1rem 1.5rem;
-  border-radius: var(--radius);
+  border-radius: $radius;
 }
 .blog-template img {
   width: 15rem;
@@ -1157,18 +1171,7 @@ About Page
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 0.5rem;
 }
-.stack-container span {
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  letter-spacing: 1px;
-  color: var(--clr-grey-4);
-}
-.stack-icon {
-  color: var(--clr-primary-5);
-  margin-right: 0.25rem;
-  font-size: 1rem;
-}
+
 @media screen and (min-width: 992px) {
   .about-center {
     display: grid;

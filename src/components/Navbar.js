@@ -8,7 +8,9 @@ const Navbar = ({ toggleSidebar }) => {
     <nav className="nav">
       <div className="nav--center">
         <div className="nav--header">
-          <img src={soupDumplingLogo} alt="soup dumpling logo" />
+          <a href="./">
+            <img src={soupDumplingLogo} alt="soup dumpling logo" />
+          </a>
           <button type="button" className="toggle-btn" onClick={toggleSidebar}>
             <img src={dumplingLogo} alt="dumpling logo" />
           </button>
