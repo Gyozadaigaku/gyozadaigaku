@@ -6,6 +6,7 @@ import SocialLinks from "../constants/socialLinks"
 import heroImg from "../assets/hero-img.svg"
 import mysteriousTriangle from "../assets/mysterious-triangle.svg"
 import heroCurve from "../assets/hero-curve.svg"
+import itsme from "../assets/I-am-Jun.svg"
 // ...GatsbyImageSharpFluid
 const query = graphql`
   {
@@ -24,7 +25,8 @@ const Hero = () => {
         <article className="hero--info">
           <div>
             <img src={heroCurve} alt="hero curve" />
-            <h1>i'm jun</h1>
+            <img src={itsme} alt="I'm Jun" />
+            {/* <h1>i'm jun</h1> */}
             <h4>A UI/UX designer based in Japan</h4>
             <Link to="/contact" className="btn">
               say hello

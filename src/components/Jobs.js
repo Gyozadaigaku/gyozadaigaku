@@ -1,9 +1,10 @@
 import React from "react"
-import Title from "./Title"
 import { FaAngleDoubleRight } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
 import checkMark from "../assets/check-mark.svg"
+import headingCurve from "../assets/heading-curve.svg"
+import title from "../assets/featured-works.svg"
 
 const query = graphql`
   {
@@ -34,7 +35,10 @@ const Jobs = () => {
 
   return (
     <section className="section jobs">
-      <Title title="expierence" />
+      <div className="section-title">
+        <img className="section-almendra" src={title} alt="featured works" />
+        <img src={headingCurve} alt="heading curve" />
+      </div>
       <div className="jobs--center">
         {/* btn container */}
         <div className="btn-container">
