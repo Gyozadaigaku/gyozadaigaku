@@ -33,7 +33,7 @@ module.exports = {
         queryLimit: 1000, // Default to 100
         singleTypes: [`about`],
         //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
-        contentTypes: [`jobs`, `works`, `blogs`],
+        contentTypes: [`jobs`, `experience`, `blogs`],
       },
     },
     {

@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Blogs from "../components/Blogs"
 import SEO from "../components/SEO"
-
+import ripples07 from "../assets/ripples-07.svg"
 const Blog = ({
   data: {
     allStrapiBlogs: { nodes: blogs },
@@ -15,6 +15,13 @@ const Blog = ({
       <section className="blog-page">
         <Blogs blogs={blogs} title="blog" />
       </section>
+      <img
+        className="ripples-07"
+        src={ripples07}
+        width=""
+        height=""
+        alt="ripples 07"
+      />
     </Layout>
   )
 }

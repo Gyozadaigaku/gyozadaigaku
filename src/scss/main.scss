@@ -748,26 +748,26 @@ Jobs
 
 /*
 =============== 
-Works
+Experiences
 ===============
 */
-section.works {
+section.experiences {
   padding: 5rem 0;
 }
 
-.works {
+.experiences {
   background: $base-color-1;
   margin-top: -1rem;
   padding-bottom: 4rem;
 }
 
-.work {
+.experience {
   display: block;
   margin-bottom: 4rem;
   position: relative;
 }
 
-.work--img {
+.experience--img {
   border-top-left-radius: $radius;
   border-top-right-radius: $radius;
   box-shadow: $dark-shadow;
@@ -775,7 +775,7 @@ section.works {
   z-index: 1;
 }
 
-.work--img::after {
+.experience--img::after {
   content: "";
   position: absolute;
   top: 0;
@@ -792,18 +792,18 @@ section.works {
   transition: $transition;
 }
 
-.work:hover .work--img::after {
+.experience:hover .experience--img::after {
   opacity: 0;
 }
 
-.work--info {
+.experience--info {
   background: $base-color-3;
   padding: 1rem 2rem;
   border-bottom-left-radius: $radius;
   border-bottom-right-radius: $radius;
 }
 
-.work--number {
+.experience--number {
   display: inline-block;
   font-size: 0.4rem;
   color: $base-color-2;
@@ -811,23 +811,23 @@ section.works {
   transform: scale(6) translateY(0.2rem);
 }
 
-.work--info h3 {
+.experience--info h3 {
   font-weight: 500;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
   transform: scale(1);
 }
 
-.work--desc {
+.experience--desc {
   word-spacing: 15px;
   color: $text-color-1;
 }
 
-.work--stack {
+.experience--stack {
   margin-bottom: 1rem;
 }
 
-.work--stack span,
+.experience--stack span,
 .about-stack span {
   display: inline-block;
   background: $accent-color-2;
@@ -844,14 +844,14 @@ section.works {
   margin-top: 0.5rem;
 }
 
-.work--icon {
+.experience--icon {
   color: $text-color-3;
   font-size: 1.25rem;
   margin-right: 0.5rem;
   transition: $transition;
 }
 
-.work--icon:hover {
+.experience--icon:hover {
   opacity: 0.8;
 }
 
@@ -862,31 +862,31 @@ section.works {
   width: 100%;
 }
 
-.cloud-left, 
+.cloud-left,
 .cloud-right {
   display: none;
 }
 
 @media screen and (min-width: 576px) {
-  .work--img {
+  .experience--img {
     height: 19rem;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .work--img {
+  .experience--img {
     height: 22rem;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .work {
+  .experience {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
   }
 
-  .work--img {
+  .experience--img {
     grid-area: 1 / 1 / 1 / span 6;
     // height: 24rem;
     height: 80%;
@@ -906,20 +906,20 @@ section.works {
     right: 2rem;
   }
 
-  .work--info {
+  .experience--info {
     background: none;
     grid-area: 1 / 8 / 1 / 13;
   }
 
-  .work--number {
+  .experience--number {
     font-size: 1.25rem;
   }
 
-  .work:nth-of-type(even) .work--img {
+  .experience:nth-of-type(even) .experience--img {
     grid-column: 7 / -1;
     grid-row: 1 / 1;
   }
-  .work:nth-of-type(even) .work--info {
+  .experience:nth-of-type(even) .experience--info {
     grid-column: 1 / span 5;
     grid-row: 1 / 1;
     text-align: left;
@@ -1001,7 +1001,9 @@ section.blogs {
   font-size: 0.85rem;
 }
 
-.ripples-05 {
+.ripples-05,
+.ripples-06,
+.ripples-07 {
   background: #222;
   width: 100%;
 }
@@ -1201,6 +1203,7 @@ About Page
 .about-page {
   padding: 7rem 0;
 }
+
 .about-img {
   margin-bottom: 2rem;
   height: 25rem;

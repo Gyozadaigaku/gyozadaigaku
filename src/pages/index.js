@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import Skills from "../components/Skills"
 import Jobs from "../components/Jobs"
-import Works from "../components/Works"
+import Experiences from "../components/Experiences"
 import Blogs from "../components/Blogs"
 import SEO from "../components/SEO"
 import ripples01 from "../assets/ripples-01.svg"
@@ -14,7 +14,7 @@ import ripples04 from "../assets/ripples-04.svg"
 import ripples05 from "../assets/ripples-05.svg"
 export default ({ data }) => {
   const {
-    allStrapiWorks: { nodes: works },
+    allStrapiExperience: { nodes: experiences },
     allStrapiBlogs: { nodes: blogs },
   } = data
 
@@ -45,7 +45,7 @@ export default ({ data }) => {
         height=""
         alt="ripples 03"
       />
-      <Works works={works} showLink />
+      <Experiences experiences={experiences} showLink />
       <img
         className="ripples-04"
         src={ripples04}
@@ -67,7 +67,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   {
-    allStrapiWorks(filter: { featured: { eq: true } }) {
+    allStrapiExperience(filter: { featured: { eq: true } }) {
       nodes {
         id
         description

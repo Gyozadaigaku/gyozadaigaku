@@ -1,26 +1,33 @@
 import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
-import Works from "../components/Works"
+import Experiences from "../components/Experiences"
 import SEO from "../components/SEO"
-
-const WorksPage = ({
+import ripples06 from "../assets/ripples-06.svg"
+const ExperiencesPage = ({
   data: {
-    allStrapiWorks: { nodes: works },
+    allStrapiExperience: { nodes: experiences },
   },
 }) => {
   return (
     <Layout>
-      <SEO title="Works" />
-      <section className="works-page">
-        <Works works={works} title="all works" />
+      <SEO title="Experiences" />
+      <section className="experiences-page">
+        <Experiences experiences={experiences} title="all experiences" />
       </section>
+      <img
+        className="ripples-06"
+        src={ripples06}
+        width=""
+        height=""
+        alt="ripples 06"
+      />
     </Layout>
   )
 }
 export const query = graphql`
   {
-    allStrapiWorks {
+    allStrapiExperience {
       nodes {
         id
         description
@@ -42,4 +49,4 @@ export const query = graphql`
   }
 `
 
-export default WorksPage
+export default ExperiencesPage

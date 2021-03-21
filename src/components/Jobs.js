@@ -1,5 +1,4 @@
 import React from "react"
-import { FaAngleDoubleRight } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
 import checkMark from "../assets/check-mark.svg"

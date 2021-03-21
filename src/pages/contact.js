@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
-
+import ripples07 from "../assets/ripples-07.svg"
 const contact = () => {
   return (
     <Layout>
@@ -36,6 +36,13 @@ const contact = () => {
           </form>
         </article>
       </section>
+      <img
+        className="ripples-07"
+        src={ripples07}
+        width=""
+        height=""
+        alt="ripples 07"
+      />
     </Layout>
   )
 }
