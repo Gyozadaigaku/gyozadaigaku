@@ -45,7 +45,7 @@ export default ({ data }) => {
         height=""
         alt="ripples 03"
       />
-      <Works works={works} title="featured works" showLink />
+      <Works works={works} showLink />
       <img
         className="ripples-04"
         src={ripples04}
@@ -53,7 +53,7 @@ export default ({ data }) => {
         height=""
         alt="ripples 04"
       />
-      <Blogs blogs={blogs} title="latest articles" showLink />
+      <Blogs blogs={blogs} showLink />
       <img
         className="ripples-05"
         src={ripples05}

@@ -7,6 +7,9 @@ import cloudRight from "../assets/distorted-clouds-right.svg"
 const Work = ({ description, title, stack, url, image, index }) => {
   return (
     <article className="work">
+      {image && (
+        <Image fluid={image.childImageSharp.fluid} className="work--img" />
+      )}
       {index % 2 === 0 ? (
         <img
           className="cloud-left"
@@ -23,9 +26,6 @@ const Work = ({ description, title, stack, url, image, index }) => {
           height=""
           alt="distorted cloud right"
         />
-      )}
-      {image && (
-        <Image fluid={image.childImageSharp.fluid} className="work--img" />
       )}
       <div className="work--info">
         <span className="work--number">0{index + 1}</span>

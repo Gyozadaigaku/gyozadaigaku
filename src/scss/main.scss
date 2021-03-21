@@ -155,21 +155,16 @@ p {
   max-width: 1170px;
 }
 
-@media screen and (min-width: 992px) {
-  .section--center {
-    width: 95vw;
-  }
-}
-
 /* added during recording */
 .section-title {
   margin-bottom: 4rem;
   text-align: center;
 }
 
-.section-almendra{
+.section-almendra {
   display: block;
   margin: auto;
+  height: 3.2rem;
 }
 
 .bg-grey {
@@ -194,6 +189,16 @@ p {
 
 .social-link:hover {
   opacity: 0.8;
+}
+
+@media screen and (min-width: 992px) {
+  .section--center {
+    width: 95vw;
+  }
+
+  .section-almendra {
+    height: 100%;
+  }
 }
 
 /*
@@ -438,6 +443,20 @@ Hero
   background: $base-color-1;
 }
 
+.hero--info .btn {
+  width: 95%;
+}
+
+.hero--info-curve {
+  display: block;
+  width: 75%;
+}
+
+.hero--info-imjun {
+  height: 4.4rem;
+  width: 75%;
+}
+
 .hero--img {
   display: none;
 }
@@ -464,6 +483,10 @@ Hero
   width: 100%;
 }
 
+.break-for-sp {
+  display: block;
+}
+
 @media screen and (min-width: 992px) {
   .hero--center {
     grid-template-columns: repeat(24, 1fr);
@@ -476,6 +499,11 @@ Hero
     grid-row: 1/1;
     grid-column: 2 / span 8;
   }
+
+  .hero--info .btn {
+    width: 100%;
+  }
+
   .hero--img {
     display: block;
     grid-row: 1/1;
@@ -488,6 +516,15 @@ Hero
     mix-blend-mode: soft-light;
     position: absolute;
     right: 6rem;
+  }
+
+  .hero--info-imjun {
+    height: 100%;
+    width: 100%;
+  }
+
+  .break-for-sp {
+    display: none;
   }
 }
 
@@ -725,8 +762,9 @@ section.works {
 }
 
 .work {
-  display: grid;
+  display: block;
   margin-bottom: 4rem;
+  position: relative;
 }
 
 .work--img {
@@ -824,6 +862,11 @@ section.works {
   width: 100%;
 }
 
+.cloud-left, 
+.cloud-right {
+  display: none;
+}
+
 @media screen and (min-width: 576px) {
   .work--img {
     height: 19rem;
@@ -838,6 +881,7 @@ section.works {
 
 @media screen and (min-width: 992px) {
   .work {
+    display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
   }
@@ -851,13 +895,15 @@ section.works {
   }
 
   .cloud-left {
+    display: block;
     position: absolute;
-    left: 6rem;
+    left: -2rem;
   }
 
   .cloud-right {
+    display: block;
     position: absolute;
-    right: 12rem;
+    right: 2rem;
   }
 
   .work--info {
@@ -1093,7 +1139,7 @@ Contact Page
 .submit-btn {
   display: block;
   width: 100%;
-  padding: 1rem;
+  padding: 0.6rem;
   border-bottom-left-radius: $radius;
   border-bottom-right-radius: $radius;
   border-top-right-radius: 0;
@@ -1183,6 +1229,8 @@ About Page
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     column-gap: 4rem;
+    max-width: 1170px;
+    margin: auto;
   }
   .about-img {
     grid-column: 1 / span 5;

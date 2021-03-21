@@ -1,5 +1,4 @@
 import React from "react"
-import Title from "./Title"
 import Blog from "./Blog"
 import { Link } from "gatsby"
 import headingCurve from "../assets/heading-curve.svg"

@@ -24,10 +24,16 @@ const Hero = () => {
       <div className="section--center hero--center">
         <article className="hero--info">
           <div>
-            <img src={heroCurve} alt="hero curve" />
-            <img src={itsme} alt="I'm Jun" />
-            {/* <h1>i'm jun</h1> */}
-            <h4>A UI/UX designer based in Japan</h4>
+            <img
+              className="hero--info-curve"
+              src={heroCurve}
+              alt="hero curve"
+            />
+            <img className="hero--info-imjun" src={itsme} alt="I'm Jun" />
+            <h4>
+              A UI/UX designer <br className="break-for-sp" />
+              based in Japan
+            </h4>
             <Link to="/contact" className="btn">
               say hello
             </Link>

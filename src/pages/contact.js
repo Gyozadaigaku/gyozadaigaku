@@ -8,7 +8,7 @@ const contact = () => {
       <SEO title="Contact" />
       <section className="contact-page">
         <article className="contact-form">
-          <h3>get in touch</h3>
+          <h3>let's talk!</h3>
           <form action="https://formspree.io/f/xaylkprg" method="POST">
             <div className="form-group">
               <input
@@ -29,10 +29,10 @@ const contact = () => {
                 placeholder="message"
                 className="form-control"
               ></textarea>
+              <button type="submit" className="submit-btn btn">
+                submit here
+              </button>
             </div>
-            <button type="submit" className="submit-btn btn">
-              submit here
-            </button>
           </form>
         </article>
       </section>
