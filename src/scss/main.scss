@@ -18,7 +18,7 @@ $transition: all 0.3s linear;
 $spacing: 0.2rem;
 $radius: 0.25rem;
 $radius-stack: 1rem;
-$clr-grey-10: hsl(210, 36%, 96%);
+$clr-grey: hsl(210, 36%, 96%);
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 $max-width: 1170px;
@@ -38,7 +38,6 @@ Global Styles
 }
 
 body {
-  // background: $base-color-1;
   color: $text-color-1;
   font-family: $ff-primary;
   font-size: 0.875rem;
@@ -145,10 +144,6 @@ p {
 }
 
 /* section */
-.section {
-  // padding: 5rem 0;
-}
-
 .section--center {
   width: 90vw;
   margin: 0 auto;
@@ -363,21 +358,27 @@ Sidebar Animation
 .sidebar-links li {
   animation: slideRight 0.5s ease-in-out 0.3s forwards;
 }
+
 .sidebar-links li:nth-of-type(1) {
   animation-delay: 0.25s;
 }
+
 .sidebar-links li:nth-of-type(2) {
   animation-delay: 0.5s;
 }
+
 .sidebar-links li:nth-of-type(3) {
   animation-delay: 0.75s;
 }
+
 .sidebar-links li:nth-of-type(4) {
   animation-delay: 1s;
 }
+
 .sidebar-links li:nth-of-type(5) {
   animation-delay: 1.25s;
 }
+
 @keyframes slideRight {
   0% {
     transform: translateX(-200px);
@@ -388,25 +389,32 @@ Sidebar Animation
     opacity: 1;
   }
 }
+
 .sidebar-icons li {
   opacity: 0;
   animation: slideUp 0.5s ease-in-out 0.3s forwards;
 }
+
 .sidebar-icons li:nth-of-type(1) {
   animation-delay: 0.25s;
 }
+
 .sidebar-icons li:nth-of-type(2) {
   animation-delay: 0.5s;
 }
+
 .sidebar-icons li:nth-of-type(3) {
   animation-delay: 0.75s;
 }
+
 .sidebar-icons li:nth-of-type(4) {
   animation-delay: 1s;
 }
+
 .sidebar-icons li:nth-of-type(5) {
   animation-delay: 1.25s;
 }
+
 @keyframes slideUp {
   0% {
     transform: translateY(200px);
@@ -454,6 +462,7 @@ Hero
 
 .hero--info-imjun {
   height: 4.4rem;
+  margin-left: -2rem;
   width: 75%;
 }
 
@@ -520,6 +529,7 @@ Hero
 
   .hero--info-imjun {
     height: 100%;
+    margin-left: 0;
     width: 100%;
   }
 
@@ -731,16 +741,20 @@ Jobs
     grid-template-columns: 200px 1fr;
     column-gap: 4rem;
   }
+
   .btn-container {
     flex-direction: column;
     justify-content: flex-start;
   }
+
   .job-btn {
     margin-bottom: 1rem;
   }
+
   .active-btn {
     box-shadow: -2px 0 $accent-color;
   }
+
   .job-btn:hover {
     box-shadow: -2px 0 $accent-color;
   }
@@ -944,7 +958,7 @@ section.blogs {
 .blog {
   display: block;
   margin-bottom: 2rem;
-  background: $clr-grey-10;
+  background: $clr-grey;
   border-radius: $radius;
   box-shadow: $light-shadow;
   transition: $transition;
@@ -1073,7 +1087,7 @@ Pages
 .error-page,
 .about-page,
 .contact-page {
-  background: $clr-grey-10;
+  background: $clr-grey;
   min-height: calc(100vh - 5rem - 9rem);
 }
 
@@ -1109,6 +1123,7 @@ Contact Page
   place-items: center;
   padding: 5rem 0;
 }
+
 .contact-form {
   text-align: center;
   width: 90vw;
@@ -1119,9 +1134,11 @@ Contact Page
   padding-top: 1.25rem;
   color: $text-color-1;
 }
+
 .form-group {
   padding: 1rem 1.5rem;
 }
+
 .form-control {
   display: block;
   width: 100%;
@@ -1130,14 +1147,15 @@ Contact Page
   margin-bottom: 1.25rem;
   background: white;
   border-radius: $radius;
-  text-transform: uppercase;
   letter-spacing: $spacing;
 }
+
 .form-control::placeholder {
   color: gray;
   text-transform: uppercase;
   letter-spacing: $spacing;
 }
+
 .submit-btn {
   display: block;
   width: 100%;
@@ -1161,10 +1179,12 @@ Blog Template
 .blog-template h2 {
   text-align: center;
 }
+
 .blog-template ul {
   margin-top: 2rem;
   display: inline-block;
 }
+
 .blog-template ul li {
   background: $accent-color-2;
   color: $text-color-1;
@@ -1181,6 +1201,7 @@ Blog Template
   color: $text-color-1;
   margin: 2rem 0;
 }
+
 .blog-template pre {
   background: #222;
   color: yellow;
@@ -1188,6 +1209,7 @@ Blog Template
   padding: 1rem 1.5rem;
   border-radius: $radius;
 }
+
 .blog-template img {
   width: 15rem;
   height: 15rem;
@@ -1208,17 +1230,21 @@ About Page
   margin-bottom: 2rem;
   height: 25rem;
 }
+
 .about-text .section-title {
   margin-bottom: 2rem;
   text-align: left;
 }
+
 .about-text .underline {
   margin-left: 0;
   margin-right: 0;
 }
+
 .about-text p {
   line-height: 2;
 }
+
 .stack-container {
   width: 30rem;
   display: grid;
@@ -1235,10 +1261,12 @@ About Page
     max-width: 1170px;
     margin: auto;
   }
+
   .about-img {
     grid-column: 1 / span 5;
     margin-bottom: 0;
   }
+
   .about-text {
     grid-column: 6 / -1;
   }
