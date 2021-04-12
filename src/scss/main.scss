@@ -158,8 +158,8 @@ p {
 
 .section-almendra {
   display: block;
-  margin: auto;
-  height: 3.2rem;
+  margin: 0 auto 1rem;
+  height: 2.8rem;
 }
 
 .bg-grey {
@@ -452,6 +452,7 @@ Hero
 }
 
 .hero--info .btn {
+  margin-left: 0.4rem;
   width: 95%;
 }
 
@@ -462,7 +463,6 @@ Hero
 
 .hero--info-imjun {
   height: 4.4rem;
-  margin-left: -2rem;
   width: 75%;
 }
 
@@ -475,6 +475,7 @@ Hero
 }
 
 .hero--info h4 {
+  margin-left: 0.4rem;
   color: $text-color-1;
 }
 
@@ -484,6 +485,10 @@ Hero
 
 .hero .btn {
   margin-top: 1.25rem;
+}
+
+.hero .social-links {
+  margin-left: 0.4rem;
 }
 
 .ripples-01 {
@@ -529,7 +534,6 @@ Hero
 
   .hero--info-imjun {
     height: 100%;
-    margin-left: 0;
     width: 100%;
   }
 
